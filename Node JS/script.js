@@ -1,9 +1,3 @@
-let args = process.argv;
+import{sum, PI} from "./Math.js";
 
-for(let i = 2;i<args.length;i++){
-    console.log("Hello to ",args[i]);
-}
-
-let Math = require("./Math");
-
-console.log(Math);
+console.log(PI);
