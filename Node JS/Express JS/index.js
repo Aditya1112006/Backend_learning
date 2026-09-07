@@ -25,6 +25,9 @@ app.get('/ironman', (req,res) => {
 app.get('/spidey', (req,res) => {
     res.send("Request for Spidey path");
 })
+app.get('/Captain America', (req,res) => {
+    res.send("Request for Captain path");
+})
 app.get("/*splat", (req, res) => { // wildcard that do not throw error whereas display message instead of that
     let message = "<h1>No such path defined</h1>";
     res.send(message);
