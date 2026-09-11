@@ -6,8 +6,19 @@
     <title>Document</title>
 </head>
 <body>
+
     <h1>This page belongs to <%= username %></h1>
+
     <button>Follow</button>
     <button>Message</button>
+
+    <h2>The person who follow you:</h2>
+
+    <ul>
+        <% for(let name of followers) { %>
+            <li><%= name %></li>
+        <% } %>
+    </ul>
+
 </body>
 </html>
