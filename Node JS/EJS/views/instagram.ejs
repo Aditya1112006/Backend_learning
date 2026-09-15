@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>This page belongs to <%= username %></h1>
+    <h1>This page belongs to <%= data.name %></h1>
+
+    <p>Followers : <%= data.followers %></p>&nbsp;&nbsp;&nbsp;&nbsp;<p>Following : <%= data.following %></p>
 
     <button>Follow</button>
     <button>Message</button>
+    <hr>
 
-    <h2>The person who follow you:</h2>
+    <% for(let post of data.posts){ %>
+        <img src= "<%= post.link %>" alt="Image">
+        <p>Likes : <%= post.likes %>&nbsp;&nbsp;&nbsp;&nbsp; Comment : <%= post.comments %></p>
 
-    <ul>
-        <% for(let name of followers) { %>
-            <li><%= name %></li>
-        <% } %>
-    </ul>
+    <% } %>
 
 </body>
 </html>
